@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <title><%= data.title%></title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+            body{
+                max-width: 1200px;
+                margin: 20px;
+                padding: 0 20px;
+                font-family: 'Noto Serif', serif;
+            }
+            p, h1, h2, h3, a, ul{
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+                color: #222;
+            }
+
+        </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><strong><%= data.title%></strong></h1>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+						<article class="thumb">
+                            <img> </img>
+                            <img src="<%= data.img %>" />
+                            <!-- <h2>Magna feugiat lorem</h2> -->
+                            <p>Created Date: <%= data.day +" / "+ data.month +" / "+ data.year%></p>
+                            <p> <%- data.transcript.replace(/\n/g, '<br/>')%></p>
+						</article>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer" class="panel">
+                        <div class="inner split">
+                            <div>
+                                <section>
+                                    <form method="post" action="#">
+                                        <ul class="actions">
+                                            <button type="submit" class="btn btn-primary btn-lg" formaction="/prev">Previous</button>
+                                            <button type="submit" class="btn btn-primary btn-lg" formaction="/next">Next</button>
+                                        </ul>
+                                    </form>
+                                </section>
+                            </div>
+                        </div>
+                    </footer>
+
+			</div>
+
+	</body>
+</html>
