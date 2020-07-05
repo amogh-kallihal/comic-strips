@@ -3,4 +3,4 @@ Node js application deployed on heroku platform
 
 https://comic-strips.herokuapp.com
 
-Using express and ejs
+Using express, ejs and bootstrap for pulling data from xkcd.com 
